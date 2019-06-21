@@ -1,2 +1,2 @@
-# get_next_line
-Recreation of standard c getnextline
+# GNL
+Recreation of Get next line function
