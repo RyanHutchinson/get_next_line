@@ -6,13 +6,13 @@
 /*   By: rhutchin <rhutchin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 10:42:18 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/06/20 14:30:53 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/06/24 11:15:32 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void	reader(const int fd, char **fd_arr)
+static void	reader(const int fd, char **fd_arr)
 {
 	char	*tmp;
 	char	buff[BUFF_SIZE + 1];
