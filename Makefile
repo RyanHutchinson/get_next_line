@@ -6,7 +6,7 @@
 #    By: rhutchin <rhutchin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/29 11:19:49 by rhutchin          #+#    #+#              #
-#    Updated: 2019/06/24 12:18:16 by rhutchin         ###   ########.fr        #
+#    Updated: 2019/06/25 11:09:47 by rhutchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ $(NAME):
 	mv *a ./libft
 	gcc main_test_fd.c get_next_line.c ./libft/libft.a
 	mv a.out test
-	./test get_next_line.c
+	./test ./tests/love_and_peace.txt
 
 clean:
 	rm -f ./libft/*o
