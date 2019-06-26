@@ -6,36 +6,34 @@
 /*   By: rhutchin <rhutchin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 09:10:59 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/06/18 14:12:11 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/06/13 14:24:01 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa_base(int n, int base)
+char *ft_itoa_base(long value, int base)
 {
-	int		temp;
-	char	*str;
-	int		size;
+    static  char rep[] = "0123456789abcdef";
+    static  char buf[50];
+    char    *ptr;
+    long     num;
+	unsigned long b;
 
-	temp = n;
-	size = 0;
-	while (temp > 0)
-	{
-		temp = temp / base;
-		size++;
-	}
-	str = ft_strnew(size + 1);
-	size--;
-	while (size >= 0)
-	{
-		temp = n % base;
-		n = n / base;
-		if (temp < 10)
-			str[size] = temp + '0';
-		else
-			str[size] = (temp - 10) + 'a';
-		size--;
-	}
-	return (str);
+    ptr = &buf[49];
+    *ptr = '\0';
+    num = value;
+    if (value < 0 && base == 10)
+        value *= -1;
+	b = (unsigned long)value;
+    if (b == 0)
+        *--ptr = rep[b % base];
+    while (b != 0)
+    {
+        *--ptr = rep[b % base];
+        b /= base;
+    }
+    if (num < 0 && base == 10)
+        *--ptr = '-';
+    return (ptr);
 }

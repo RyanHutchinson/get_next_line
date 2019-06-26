@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rhutchin <rhutchin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:16:31 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/06/21 17:26:17 by marvin           ###   ########.fr       */
+/*   Updated: 2019/06/26 09:36:11 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct		s_list
 }					t_list;
 
 int					ft_atoi(const char *str);
-char				*ft_itoa_base(int n, int base);
+char				*ft_itoa_base(long value, int base);
 
 void				ft_bzero(void *str, size_t n);
 
